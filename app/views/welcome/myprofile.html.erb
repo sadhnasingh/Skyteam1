@@ -1,0 +1,21 @@
+<html>
+<body><br><br>
+	<table border="2px" align="center" width="30%", style="background-color: violet">
+	<td>
+<center><h1>My Profile </h1></center>
+ <ul>
+<% if current_user.present? %>
+
+	 <strong>Email:</strong>
+	<%= current_user.email %><br><br>
+  <%end%> 
+   
+   
+</ul>
+<%= link_to 'Edit my profile', edit_user_registration_path, class: "btn btn-success" %>
+</td>
+</table><br>
+<center><%= link_to 'Back', :back, class: "btn btn-success btn-lg" %></center>
+
+</body>
+</html>
