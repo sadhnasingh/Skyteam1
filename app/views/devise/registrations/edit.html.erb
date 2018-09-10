@@ -38,7 +38,23 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+   <h1 align="center" ><u>Other details</u></h1><br>
+   <div class="field">
+    <%= f.label :Gender %><br />
+ <%= f.radio_button :gender, 'female' %> female<br />
+    <%= f.radio_button :gender, 'male' %> male<br />
+  </div>
+ <div class="field">
+    <%= f.label :Date_of_birth %><br />
+    <%= f.date_field :dob, autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Teaching_sub %><br>
+    <%= f.select :rteachingsub, options_for_select(["Php", "java", ".net"], selected: :rteachingsub),  
+:class=>'formSelect' %>
 
+</div>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

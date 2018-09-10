@@ -17,16 +17,14 @@
   <% if current_user.teacher? %>
       <strong>Gender:</strong>
 	<%= current_user.gender %><br><br>
-     <strong>DAte of birth:</strong>
-	<%= current_user.enrollment_id %><br><br>
-		 <strong>Contact No:</strong>
-	<%= current_user.phone_no %><br><br>
-
+     <strong>Date of birth:</strong>
+	<%= current_user.dob %><br><br>
+		 <strong>Teaching Sub:</strong>
+	<%= current_user.rteachingsub %><br><br>
+<%end%>
   </ul>
 <%= link_to 'Edit my profile', edit_user_registration_path, class: "btn btn-success" %>
-<% if current_user.teacher? %>
-<%= link_to 'fill other details of my profile', welcome_otherdetail_path, class: "btn btn-success" %>
-<%end%>
+
 </td>&nbsp;&nbsp;<br>
 </table><br>
 <center><%= link_to 'Back', :back, class: "btn btn-success btn-lg" %></center>

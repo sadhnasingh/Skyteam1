@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/myprofile'
   root 'welcome#index'
-  get 'welcome/otherdetail'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
